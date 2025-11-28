@@ -22,6 +22,7 @@ $interval(updateTime, 1000);
 </script>
 </body>
 </html>
+https://code.angularjs.org 1.6.0
  browser slip2_1.html
 
 
@@ -67,6 +68,7 @@ db.Teacher.insertMany([
 ]);
 db.Teacher.find();
 db.Teacher.find({ salary: { $gt: 20000 } });
+
 
 
 
