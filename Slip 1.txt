@@ -15,7 +15,7 @@ res.write("Lowercase: " + lower + "\n");
 res.end();
 }).listen(3000);
 console.log("Server running at http://localhost:3000/");
-
+run=node slip1.js
 
 
 Q2 Create an HTML form using AngularJS that contain the Student Registration details and validate Student first and last name as it should not contain other than alphabets and age should be between 18 to 50 and display greeting message depending on current time using ng-show.
@@ -81,3 +81,4 @@ $interval(updateGreeting, 60000);
 </body>
 </html>
 Save With html
+
