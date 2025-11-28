@@ -47,7 +47,7 @@ server.listen(PORT, () => {
 console.log(`Server running at http://localhost:${PORT}/`);
 });
 Save as .js
-
+node slip4.js
 
 
 
@@ -83,4 +83,9 @@ await client.close();
 }
 insertMultipleCustomers();
 Save as js
+node slip.js
+net start MongoDB
+mongod
+npm install mongodb
+
 
