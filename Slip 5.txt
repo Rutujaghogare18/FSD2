@@ -51,6 +51,63 @@ async function run() {
 
 // Run the function
 run();
+....
+.
+.
+.
+.
+.
+
+correct
+
+const { MongoClient } = require('mongodb');
+
+const uri = 'mongodb://localhost:27017';
+const dbName = 'college';
+
+async function run() {
+  const client = new MongoClient(uri);
+
+  try {
+    await client.connect();
+    console.log('Connected to MongoDB');
+
+    const db = client.db(dbName);
+    const studentsCollection = db.collection('students');
+
+    const newStudent = {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 20,
+      department: 'Computer Science',
+      enrollmentDate: new Date(),
+    };
+
+    const insertResult = await studentsCollection.insertOne(newStudent);
+    console.log('Student inserted with id:', insertResult.insertedId);
+
+    const students = await studentsCollection.find().toArray();
+    console.log('All Students:', students);
+
+    const student = await studentsCollection.findOne({ firstName: 'John' });
+    console.log('Found Student:', student);
+
+  } catch (error) {
+    console.error('Error interacting with MongoDB:', error);
+  } finally {
+    await client.close();
+    console.log('MongoDB connection closed');
+  }
+}
+
+run();
+.
+.
+.
+.
+.
+
+.
 
 
 
@@ -84,5 +141,6 @@ server.listen(3000, () => {
 console.log('Server is running at http://localhost:3000');
 });
 Save as .js
+
 
 
