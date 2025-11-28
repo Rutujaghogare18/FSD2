@@ -10,7 +10,7 @@ res.end('Hello, world!\n');
 server.listen(port, hostname, () => {
 console.log(`Server running at http://${hostname}:${port}/`);
 });
-
+ node slip3.js
 
 Q2 Create a program to display the student registration page using middleware ExpressJS.
 const express = require('express');
@@ -58,8 +58,10 @@ console.log(`Server is running at http://localhost:${PORT}`);
 });
 
 Commands to run
-npm install express
 Run npm init -y to create a package.json
+npm install express
+node slip3_2.js
 Run this
 http://localhost:3000/register
+
 
